@@ -1,7 +1,7 @@
 @import "./variables";
 
 .nav-bar {
-  @include flex-box(flex-start);
+  @include flex-box(space-between);
 
   width: 100vw;
   height: 12vh;
@@ -12,14 +12,20 @@
     height: 105%;
   }
 
-  .btn {
+  .link-wrapper {
+    @include flex-box(space-between);
+
+    width: 20vw;
+    margin-right: 3vw;
+  }
+
+  .link {
     @include flex-box;
     @include trans(background-color);
 
-    width: 8vw;
+    width: 8.5vw;
     padding: 1.2% 3%;
     height: 6vh;
-    margin-right: 3%;
     border-radius: 0.5vh;
     border: 2px solid $highlight;
 
