@@ -1,16 +1,26 @@
-@import "./variables";
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
 
+@import "./variables";
 @import "./NavBar";
+@import "./submit-btn";
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Roboto Mono", sans-serif;
 }
 
 html {
   background-color: $background;
   color: $text_color;
+}
+
+.app {
+  @include flex-box(flex-start, center, column);
+
+  width: 100vw;
+  height: 100vh;
 }
 
 button {
@@ -21,10 +31,9 @@ button {
 
 .file-drop {
   position: relative;
-  height: 30vh;
+  height: 40vh;
   width: 50vw;
-  top: 10vh;
-  left: 25vw;
+  margin-top: 10vh;
 
   .file-drop-target {
     position: absolute;
@@ -59,5 +68,9 @@ button {
       color: $lightHighlight;
       box-shadow: 0 0 13px 3px $lightHighlight;
     }
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 }

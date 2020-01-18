@@ -9,8 +9,6 @@ interface Button {
 function Button({ name, selected, onClick }) {
   let className = selected ? "btn selected" : "btn";
 
-  console.log({ className, selected });
-
   return (
     <button className={className} onClick={onClick}>
       {name}

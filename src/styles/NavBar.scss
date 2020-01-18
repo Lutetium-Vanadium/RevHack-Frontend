@@ -1,11 +1,16 @@
 @import "./variables";
 
 .nav-bar {
-  @include flex-box(flex-start, center, row-reverse);
+  @include flex-box(flex-start);
 
   width: 100vw;
-  height: 10vh;
+  height: 12vh;
   background-color: $lightbg;
+
+  img {
+    margin-left: 3vw;
+    height: 105%;
+  }
 
   .btn {
     @include flex-box;

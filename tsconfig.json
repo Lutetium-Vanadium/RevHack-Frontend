@@ -8,7 +8,8 @@
     "paths": {
       "~*": ["./src/*"],
       "styles": ["./src/styles"],
-      "shared": ["./src/shared"]
+      "shared": ["./src/shared"],
+      "pics": ["./src/pics"]
     }
   },
   "include": ["global.d.ts"],
