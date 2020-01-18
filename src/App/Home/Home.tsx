@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
 
-import { HIN, ENG } from "/shared/constants";
+import { HIN, ENG, API_URL } from "/shared/constants";
 import Button from "/shared/Button";
 import FileUpload from "/shared/FileUpload";
 
@@ -26,10 +26,10 @@ function Home() {
 
     setProgress("Converting...");
 
-    let download_route = await fetch(`/${route}`, {
+    let download_route = await fetch(`${API_URL}/${route}`, {
       method: "POST",
       body: data,
-      headers: { "Content-Type": "application/form" }
+      headers: { "Content-Type": "multipart/form-data" }
     });
 
     setProgress("Downloading...");
